@@ -1,0 +1,33 @@
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Full Name</th>
+      <th>Phone Number</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+    </tr>
+
+    <!-- List the contacts -->
+    {{#each contacts as |contact|}}
+      <tr>
+        <td>{{contact.fullName}}</td>
+        <td>{{contact.phoneNumber}}</td>
+        <td>{{contact.mobileNumber}}</td>
+
+        <td>
+          <button {{action 'deleteContact' contact}}>
+            Delete Contact
+          </button>
+        </td>
+      </tr>
+
+    <!-- We have no contacts -->
+    {{else}}
+      <tr>
+        <td colspan="4">
+          You have not created any contacts.
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

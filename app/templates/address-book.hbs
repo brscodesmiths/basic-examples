@@ -1,0 +1,13 @@
+<h1>Contact List</h1>
+
+<!-- Create Contact Form -->
+{{create-contact
+  createContact=(action 'createContact')
+}}
+
+<hr>
+
+<!-- Contacts Table -->
+{{contact-list
+  contacts=model.contacts
+}}
